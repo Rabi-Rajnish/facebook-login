@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect fill='%231877f2' width='24' height='24'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='14' font-weight='bold'>f</text></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="facebook.css">
+</head>
+<body>
+    <div class="logo">facebook</div>
+    <div class="logbox">
+        <h2>Log in to facebook</h2>
+
+        <input type="text" placeholder="Email address or phone number">
+        <input type="password" placeholder="Password"><br>
+
+        <button class="login-btn" onclick="handleLogin()">Log in</button><br>
+        <a href="#" class="forget">Forgotten account?</a>
+
+        <div class="divider-container">
+            <div class="divider"></div>
+            <p class="or-text">or</p>
+            <div class="divider"></div>
+        </div>
+        <button class="create-btn">Create new account</button>
+
+    </div>
+
+    <div id="successMessage" class="success-message" style="display: none;">
+        <div class="circular-logo">
+            <span>f</span>
+        </div>
+        <h1>Login Successful!</h1>
+        <p>Welcome to Facebook</p>
+    </div>
+    <footer>
+    <p>&copy; 2025 My Website Name. All rights reserved.</p>
+    <nav>
+      <a href="/about.html">About Us</a> | 
+      <a href="/contact.html">Contact</a> | 
+      <a href="/privacy.html">Privacy Policy</a>
+    </nav>
+  </footer>
+    
+  <script>
+    function handleLogin() {
+      const loginBox = document.querySelector('.logbox');
+      const successMsg = document.getElementById('successMessage');
+      
+      loginBox.style.display = 'none';
+      successMsg.style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
